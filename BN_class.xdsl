@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<smile version="1.0" id="Network1" numsamples="1000" discsamples="10000">
+	<nodes>
+		<cpt id="Risk_Class">
+			<state id="Cancer" />
+			<state id="Not_cancer" />
+			<probabilities>0.25 0.75</probabilities>
+		</cpt>
+		<cpt id="A">
+			<state id="low" />
+			<state id="medium" />
+			<state id="high" />
+			<parents>Risk_Class</parents>
+			<probabilities>0.09 0.37 0.54 0.4274193548387097 0.3225806451612903 0.25</probabilities>
+		</cpt>
+		<cpt id="B">
+			<state id="low" />
+			<state id="medium" />
+			<state id="high" />
+			<parents>Risk_Class</parents>
+			<probabilities>0.1 0.35 0.55 0.5564516129032258 0.3145161290322581 0.1290322580645161</probabilities>
+		</cpt>
+	</nodes>
+	<cases>
+		<case name="Case0001">
+			<evidence node="B" state="low" />
+		</case>
+		<case name="Case0002">
+			<evidence node="A" state="low" />
+		</case>
+		<case name="Case0003">
+		</case>
+		<case name="Case0004">
+		</case>
+		<case name="Case0005">
+			<evidence node="A" state="low" />
+			<evidence node="B" state="low" />
+		</case>
+	</cases>
+	<extensions>
+		<genie version="1.0" app="GeNIe 2.1.380.0" name="Naive classifier" faultnameformat="nodestate">
+			<node id="A">
+				<name>Attribute_A</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>282 188 316 209</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="B">
+				<name>Attribute_B</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>618 183 652 204</position>
+				<barchart active="true" width="128" height="108" />
+			</node>
+			<node id="Risk_Class">
+				<name>Risk_Class</name>
+				<interior color="ff9900" />
+				<outline color="ff0000" />
+				<font color="000000" name="Arial" size="8" />
+				<position>457 281 495 304</position>
+				<barchart active="true" width="128" height="64" />
+			</node>
+		</genie>
+	</extensions>
+</smile>
