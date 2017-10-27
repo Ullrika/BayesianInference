@@ -1,0 +1,7 @@
+Risk_Class	A	B
+Cancer	high	medium
+Not_cancer	high	high
+Not_cancer	medium	low
+Not_cancer	low	low
+Cancer	high	medium
+Not_cancer	low	low
